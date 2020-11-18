@@ -14,10 +14,15 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1024, 
-    height: 786,
+    width: 150, 
+    height: 120,
     minWidth: 10,
     minHeight: 10,
+    alwaysOnTop: true,
+    autoHideMenuBar: true,
+  //   webPreferences: {
+  //     nodeIntegration: true,
+  // },
   })
 
   // and load the index.html of the app.
@@ -28,7 +33,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
